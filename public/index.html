@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body class="text-gray-600 font-body" >
+    <div class="grid md:grid-cols-3">
+        <!--content wrapper-->
+        <div class="md:col-span-1 md:flex md:justify-end">
+            <!--navbar-->
+            <nav class="text-right">
+                <div class="flex justify-between items-center">
+                    <h1 class="font-bold uppercase p-4 border-gray-100 text-orange-600 "><a class="hover:text-orange-800" href="#">Restaurant Menu</a></h1>
+                    <div class="px-4 cursor-pointer md:hidden" id="restau">
+                        <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                      </div>
+                </div>
+                <ul class="text-sm mt-6 hidden md:block" id="menu">
+                    <li class=" text-gray-700 font-bold py-1">
+                        <a href="#"  class="block px-4 flex justify-end border-r-4 border-primary">
+                           <span>Home </span>
+                            <svg class="iclink" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="links">
+                          <span>About </span>
+                          <svg class="iclink" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                          </svg>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#" class="links">
+                            <span>Contact </span>
+                            <svg class="iclink" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                              </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav><!--end nav-->
+        </div>
+        <div class="md:col-span-2"> <main class="px-16 py-6 bg-gray-100">
+
+                <div class="flex justify-center md:justify-end">
+                    <a href="#" class="btn btn2 mr-1 ">Log in</a>
+                    <a href="#" class="btn btn2">Sign up</a>
+                </div>
+
+                <header>
+                    <h2 class="text-gray-700 text-6xl font-semibold">
+                        Our Delectable Menu
+                     </h2>
+                    <h3 class="text-2xl font-semibold lowercase">For Food Lovers</h3>
+                </header>
+
+                <div>
+                    <!--Starters-->
+                    <h4 class="title">Starters</h4>
+                        <!--cards 1-->
+                        <div class="collection">
+                        <!--card-->
+                        <div class="card">
+                            <img src="imgs/salade-cesar.jpg" alt="Cesar Salad" class="w-full h-58  sm:h-48 object-cover">
+                            <div class="m-4">
+                                <span class="font-bold">Cesar Salad</span>
+                                <span class="block text-gray-400 text-sm">Price</span>
+                            </div>
+                            <div class="badge1">
+                                <svg class="w-6 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                </svg>
+                                <span >Available</span>
+                            </div>
+                        </div> <!--end card-->
+                       
+                                               <!--cards 2-->
+                                               <div class="card">
+                                                <img src="imgs/italian-pasta-salad.jpg" alt="Italian Pasta Salad" class="w-full h-58  sm:h-48 object-cover">
+                                                <div class="m-4">
+                                                    <span class="font-bold">Italian Pasta Salad</span>
+                                                    <span class="price">Price</span>
+                                                </div>
+                                                <div class="badge2">
+                                                    <svg class="w-6 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                                      </svg>
+                                                    <span >Not Available</span>
+                                                </div>
+                                            </div> <!--end card-->
+
+                                                                   <!--card-->
+                        <div class="card">
+                            <img src="imgs/Salade-Nicoise.jpg" alt="Nicoise Salad" class="w-full h-58  sm:h-48 object-cover">
+                            <div class="m-4">
+                                <span class="font-bold">Nicoise Salad</span>
+                                <span class="price">Price</span>
+                            </div>
+                            <div class="badge2">
+                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                  </svg>
+                                <span >Not Available</span>
+                            </div>
+                        </div> <!--end card-->
+                                                       <!--card-->
+                                                       <div class="card">
+                                                        <img src="imgs/soupe-repas-au-poulet-et-aux-legumes.jpeg" alt="Chicken And Vegetable Soup" class="w-full h-58  sm:h-48 object-cover">
+                                                        <div class="m-4">
+                                                            <span class="font-bold">Chicken And Vegetable Soup</span>
+                                                            <span class="price">Price</span>
+                                                        </div>
+                                                        <div class="badge1">
+                                                            <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                </svg>
+                                                                <span >Available</span>
+                                                        </div>
+                                                    </div> <!--end card-->
+                                                     <!--card-->
+                                                     <div class="card">
+                                                        <img src="imgs/Soupe aux  légumes.jpg" alt="Vegetable Soup" class="w-full h-58  sm:h-48 object-cover">
+                                                        <div class="m-4">
+                                                            <span class="font-bold">Vegetable Soup</span>
+                                                            <span class="price">Price</span>
+                                                        </div>
+                                                        <div class="badge1">
+                                                            <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                </svg>
+                                                                <span >Available</span>
+                                                        </div>
+                                                    </div> <!--end card-->
+                                                       <!--card-->
+                                                       <div class="card">
+                                                        <img src="imgs/Soupe bio au poulet, nouilles et miso.jpg" alt="Organic Soup" class="w-full h-58  sm:h-48 object-cover">
+                                                        <div class="m-4">
+                                                            <span class="font-bold">Organic Soup</span>
+                                                            <span class="price">Price</span>
+                                                        </div>
+                                                        <div class="badge2">
+                                                            <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                                              </svg>
+                                                            <span >Not Available</span>
+                                                        </div>
+                                                    </div> <!--end card-->
+                                                         <!--card-->
+                                                         <div class="card">
+                                                            <img src="imgs/pasta-salad.jpeg" alt="Pasta Salad" class="w-full h-58  sm:h-48 object-cover">
+                                                            <div class="m-4">
+                                                                <span class="font-bold">Pasta Salad</span>
+                                                                <span class="price">Price</span>
+                                                            </div>
+                                                            <div class="badge1">
+                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                    </svg>
+                                                                    <span >Available</span>
+                                                            </div>
+                                                        </div> <!--end card-->
+                        <!--end cards-->
+                    </div>  <!--end cards 1-->
+                    <div class="more">
+                        <div class=" btn btn3"> Load more</div>
+                    </div>
+                        <h4 class="title">Main courses</h4> 
+                        <!--cards 2 go here -->
+                        <div class="collection">
+                            <!--card-->
+                            <div class="card">
+                                <img src="imgs/cordon bleu.jpg" alt="Blue Cord" class="w-full h-58  sm:h-48 object-cover">
+                                <div class="m-4">
+                                    <span class="font-bold">Blue Cord</span>
+                                    <span class="price">Price</span>
+                                </div>
+                                <div class="badge1">
+                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                    </svg>
+                                    <span >Available</span>
+                                </div>
+                            </div> <!--end card-->
+                           
+                                                   <!--cards -->
+                                                   <div class="card">
+                                                    <img src="imgs/Fish_Chips.jpg" alt="Fish & Chips" class="w-full h-58  sm:h-48 object-cover">
+                                                    <div class="m-4">
+                                                        <span class="font-bold">Fish & Chips</span>
+                                                        <span class="price">Price</span>
+                                                    </div>
+                                                    <div class="badge2">
+                                                        <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                                          </svg>
+                                                        <span >Not Available</span>
+                                                    </div>
+                                                </div> <!--end card-->
+    
+                                                                       <!--card-->
+                            <div class="card">
+                                <img src="imgs/fried chicken.jpg" alt="Fried Chicken" class="w-full h-58  sm:h-48 object-cover">
+                                <div class="m-4">
+                                    <span class="font-bold">Fried Chicken</span>
+                                    <span class="price">Price</span>
+                                </div>
+                                <div class="badge1">
+                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                        </svg>
+                                        <span >Available</span>
+                                </div>
+                            </div> <!--end card-->
+                                                           <!--card-->
+                                                           <div class="card">
+                                                            <img src="imgs/hamurger.jpeg" alt="Hamurger" class="w-full h-58  sm:h-48 object-cover">
+                                                            <div class="m-4">
+                                                                <span class="font-bold">Hamurger</span>
+                                                                <span class="price">Price</span>
+                                                            </div>
+                                                            <div class="badge1">
+                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                    </svg>
+                                                                    <span >Available</span>
+                                                            </div>
+                                                        </div> <!--end card-->
+                                                         <!--card-->
+                                                         <div class="card">
+                                                            <img src="imgs/pizza.webp" alt="Pizza" class="w-full h-58  sm:h-48 object-cover">
+                                                            <div class="m-4">
+                                                                <span class="font-bold">Pizza</span>
+                                                                <span class="price">Price</span>
+                                                            </div>
+                                                            <div class="badge1">
+                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                    </svg>
+                                                                    <span >Available</span>
+                                                            </div>
+                                                        </div> <!--end card-->
+                                                           <!--card-->
+                                                           <div class="card">
+                                                            <img src="imgs/plat principal.jpg" alt="Meal" class="w-full h-58  sm:h-48 object-cover">
+                                                            <div class="m-4">
+                                                                <span class="font-bold">Meal</span>
+                                                                <span class="price">Price</span>
+                                                            </div>
+                                                            <div class="badge1">
+                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                    </svg>
+                                                                    <span >Available</span>
+                                                            </div>
+                                                        </div> <!--end card-->
+                                                             <!--card-->
+                                                             <div class="card">
+                                                                <img src="imgs/poissons.webp" alt="Fish" class="w-full h-58  sm:h-48 object-cover">
+                                                                <div class="m-4">
+                                                                    <span class="font-bold">Fish</span>
+                                                                    <span class="price">Price</span>
+                                                                </div>
+                                                                <div class="badge2">
+                                                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                                                      </svg>
+                                                                    <span >Not Available</span>
+                                                                </div>
+                                                            </div> <!--end card-->
+                                                               <!--card-->
+                                                               <div class="card">
+                                                                <img src="imgs/Rôti de veau au four.webp" alt="Roast Veal" class="w-full h-58  sm:h-48 object-cover">
+                                                                <div class="m-4">
+                                                                    <span class="font-bold">Roast Veal</span>
+                                                                    <span class="price">Price</span>
+                                                                </div>
+                                                                <div class="badge1">
+                                                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                        </svg>
+                                                                        <span >Available</span>
+                                                                </div>
+                                                            </div> <!--end card-->
+                                                                <!--card-->
+                                                                <div class="card">
+                                                                    <img src="imgs/sushi.jpg" alt="Sushi" class="w-full h-58  sm:h-48 object-cover">
+                                                                    <div class="m-4">
+                                                                        <span class="font-bold">Sushi</span>
+                                                                        <span class="price">Price</span>
+                                                                    </div>
+                                                                    <div class="badge2">
+                                                                        <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                                                          </svg>
+                                                                        <span >Not Available</span>
+                                                                    </div>
+                                                                </div> <!--end card-->
+                                                                    <!--card-->
+                                                               <div class="card">
+                                                                <img src="imgs/un-plat-de-poisson.jpg" alt="A Fish Dish" class="w-full h-58  sm:h-48 object-cover">
+                                                                <div class="m-4">
+                                                                    <span class="font-bold">A Fish Dish</span>
+                                                                    <span class="price">Price</span>
+                                                                </div>
+                                                                <div class="badge1">
+                                                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                        </svg>
+                                                                        <span >Available</span>
+                                                                </div>
+                                                            </div> <!--end card-->
+                            <!--end cards-->
+                        </div>  <!--end cards 2-->
+                        <div class="more">
+                            <div class=" btn btn3"> Load more</div>
+                        </div>
+                        <h4 class="title">Desserts</h4> 
+                        <!--cards 3 go here -->
+                        <div class="collection">
+                            <!--card-->
+                            <div class="card">
+                                <img src="imgs/coeur-fondant-au-chocolat.jpg" alt="Chocolate Melt Heart" class="w-full h-58  sm:h-48 object-cover">
+                                <div class="m-4">
+                                    <span class="font-bold">Chocolate Melt Heart</span>
+                                    <span class="price">Price</span>
+                                </div>
+                                <div class="badge1">
+                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                    </svg>
+                                    <span >Available</span>
+                                </div>
+                            </div> <!--end card-->
+                           
+                                                   <!--cards -->
+                                                   <div class="card">
+                                                    <img src="imgs/creme-dessert-au-chocolat.jpeg" alt="Chocolate Cream" class="w-full h-58  sm:h-48 object-cover">
+                                                    <div class="m-4">
+                                                        <span class="font-bold">Chocolate Cream</span>
+                                                        <span class="price">Price</span>
+                                                    </div>
+                                                    <div class="badge2">
+                                                        <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                                          </svg>
+                                                        <span >Not Available</span>
+                                                    </div>
+                                                </div> <!--end card-->
+    
+                                                                       <!--card-->
+                            <div class="card">
+                                <img src="imgs/fondant_chocolat.jpg" alt="Chocolate Cake" class="w-full h-58  sm:h-48 object-cover">
+                                <div class="m-4">
+                                    <span class="font-bold">Chocolate Cake</span>
+                                    <span class="price">Price</span>
+                                </div>
+                                <div class="badge2">
+                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                      </svg>
+                                    <span >Not Available</span>
+                                </div>
+                            </div> <!--end card-->
+                                                           <!--card-->
+                                                           <div class="card">
+                                                            <img src="imgs/gateau-creme-glacee-au-caramel-et-croute-de-bretzel.jpg" alt="Caramel Ice Cream Cak" class="w-full h-58  sm:h-48 object-cover">
+                                                            <div class="m-4">
+                                                                <span class="font-bold">Caramel Ice Cream Cake</span>
+                                                                <span class="price">Price</span>
+                                                            </div>
+                                                            <div class="badge1">
+                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                    </svg>
+                                                                    <span >Available</span>
+                                                            </div>
+                                                        </div> <!--end card-->
+                                                         <!--card-->
+                                                         <div class="card">
+                                                            <img src="imgs/gateau-napoleon.jpg" alt="Napoleon Cake" class="w-full h-58  sm:h-48 object-cover">
+                                                            <div class="m-4">
+                                                                <span class="font-bold">Napoleon Cake</span>
+                                                                <span class="price">Price</span>
+                                                            </div>
+                                                            <div class="badge1">
+                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                    </svg>
+                                                                    <span >Available</span>
+                                                            </div>
+                                                        </div> <!--end card-->
+                                                           <!--card-->
+                                                           <div class="card">
+                                                            <img src="imgs/Gâteau aux fraises.jpg" alt="Strawberry Cake" class="w-full h-58  sm:h-48 object-cover">
+                                                            <div class="m-4">
+                                                                <span class="font-bold">Strawberry Cake</span>
+                                                                <span class="price">Price</span>
+                                                            </div>
+                                                            <div class="badge1">
+                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                    </svg>
+                                                                    <span >Available</span>
+                                                            </div>
+                                                        </div> <!--end card-->
+                                                             <!--card-->
+                                                             <div class="card">
+                                                                <img src="imgs/Gâteau cœur de crème.jpg" alt="Cream Heart Cake" class="w-full h-58  sm:h-48 object-cover">
+                                                                <div class="m-4">
+                                                                    <span class="font-bold">Cream Heart Cake</span>
+                                                                    <span class="price">Price</span>
+                                                                </div>
+                                                                <div class="badge1">
+                                                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                        </svg>
+                                                                        <span >Available</span>
+                                                                </div>
+                                                            </div> <!--end card-->
+                                                               <!--card-->
+                                                               <div class="card">
+                                                                <img src="imgs/Magnolia.webp" alt="Magnolia" class="w-full h-58  sm:h-48 object-cover">
+                                                                <div class="m-4">
+                                                                    <span class="font-bold">Magnolia</span>
+                                                                    <span class="price">Price</span>
+                                                                </div>
+                                                                <div class="badge1">
+                                                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                        </svg>
+                                                                        <span >Available</span>
+                                                                </div>
+                                                            </div> <!--end card-->
+                                                                     <!--card-->
+                                                                     <div class="card">
+                                                                        <img src="imgs/Mousse-au-chocolat.webp" alt="Chocolate Mousse" class="w-full h-58  sm:h-48 object-cover">
+                                                                        <div class="m-4">
+                                                                            <span class="font-bold">Chocolate Mousse</span>
+                                                                            <span class="price">Price</span>
+                                                                        </div>
+                                                                        <div class="badge1">
+                                                                            <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                                <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                                </svg>
+                                                                                <span >Available</span>
+                                                                        </div>
+                                                                    </div> <!--end card-->
+                                                                      <!--card-->
+                                                                      <div class="card">
+                                                                        <img src="imgs/panna_cotta.jpg" alt="Panna Cotta" class="w-full h-58  sm:h-48 object-cover">
+                                                                        <div class="m-4">
+                                                                            <span class="font-bold">Panna Cotta</span>
+                                                                            <span class="price">Price</span>
+                                                                        </div>
+                                                                        <div class="badge1">
+                                                                            <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                                <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                                </svg>
+                                                                                <span >Available</span>
+                                                                        </div>
+                                                                    </div> <!--end card-->
+                                                                          <!--card-->
+                                                                          <div class="card">
+                                                                            <img src="imgs/Tiramisu.jpg" alt="Tiramisu" class="w-full h-58  sm:h-48 object-cover">
+                                                                            <div class="m-4">
+                                                                                <span class="font-bold">Tiramisu</span>
+                                                                                <span class="price">Price</span>
+                                                                            </div>
+                                                                            <div class="badge1">
+                                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                                    </svg>
+                                                                                    <span >Available</span>
+                                                                            </div>
+                                                                        </div> <!--end card-->
+                           
+                        </div>
+                        
+                        <!--end cards 3-->
+                        <div class="more">
+                            <div class=" btn btn3"> Load more</div>
+                        </div>
+                        <h4 class="title">Drinks</h4>
+                        <!--cards 4 go here -->
+                        <div class="collection">
+                            <!--card-->
+                            <div class="card">
+                                <img src="imgs/jus d'orange et de pomme.jpg" alt="Orange And Apple Juice" class="w-full h-58  sm:h-48 object-cover">
+                                <div class="m-4">
+                                    <span class="font-bold">Orange And Apple Juice</span>
+                                    <span class="price">Price</span>
+                                </div>
+                                <div class="badge1">
+                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                    </svg>
+                                    <span >Available</span>
+                                </div>
+                            </div> <!--end card-->
+                           
+                                                   <!--cards 2-->
+                                                   <div class="card">
+                                                    <img src="imgs/jus de kiwi.jpg" alt="Kiwi Juice" class="w-full h-58  sm:h-48 object-cover">
+                                                    <div class="m-4">
+                                                        <span class="font-bold">Kiwi Juice</span>
+                                                        <span class="price">Price</span>
+                                                    </div>
+                                                    <div class="badge1">
+                                                        <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                            </svg>
+                                                            <span >Available</span>
+                                                    </div>
+                                                </div> <!--end card-->
+    
+                                                                       <!--card-->
+                            <div class="card">
+                                <img src="imgs/jus-legume.webp" alt="Vegetable Juice" class="w-full h-58  sm:h-48 object-cover">
+                                <div class="m-4">
+                                    <span class="font-bold">Vegetable Juice</span>
+                                    <span class="price">Price</span>
+                                </div>
+                                <div class="badge2">
+                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                      </svg>
+                                    <span >Not Available</span>
+                                </div>
+                            </div> <!--end card-->
+                                                           <!--card-->
+                                                           <div class="card">
+                                                            <img src="imgs/Jus carottes, orange, fraises et gingembre.jpg" alt="Carrot, Orange, Strawberry And Ginger Juice" class="w-full h-58  sm:h-48 object-cover">
+                                                            <div class="m-4">
+                                                                <span class="font-bold">Carrot, Orange, Strawberry And Ginger Juice</span>
+                                                                <span class="price">Price</span>
+                                                            </div>
+                                                            <div class="badge2">
+                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                                                  </svg>
+                                                                <span >Not Available</span>
+                                                            </div>
+                                                        </div> <!--end card-->
+                                                         <!--card-->
+                                                         <div class="card">
+                                                            <img src="imgs/Jus d'orange frais.jpg" alt="Fresh Orange Juice" class="w-full h-58  sm:h-48 object-cover">
+                                                            <div class="m-4">
+                                                                <span class="font-bold">Fresh Orange Juice</span>
+                                                                <span class="price">Price</span>
+                                                            </div>
+                                                            <div class="badge1">
+                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                    </svg>
+                                                                    <span >Available</span>
+                                                            </div>
+                                                        </div> <!--end card-->
+                                                           <!--card-->
+                                                           <div class="card">
+                                                            <img src="imgs/Jus de banane.jpeg" alt="" class="w-full h-58  sm:h-48 object-cover">
+                                                            <div class="m-4">
+                                                                <span class="font-bold">Banana Juice</span>
+                                                                <span class="price">Price</span>
+                                                            </div>
+                                                            <div class="badge1">
+                                                                <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                    </svg>
+                                                                    <span >Available</span>
+                                                            </div>
+                                                        </div> <!--end card-->
+                                                             <!--card-->
+                                                             <div class="card">
+                                                                <img src="imgs/Jus de carotte.jpg" alt="Carrot Juice" class="w-full h-58  sm:h-48 object-cover">
+                                                                <div class="m-4">
+                                                                    <span class="font-bold">Carrot Juice</span>
+                                                                    <span class="price">Price</span>
+                                                                </div>
+                                                                <div class="badge2">
+                                                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                                                      </svg>
+                                                                    <span >Not Available</span>
+                                                                </div>
+                                                            </div> <!--end card-->
+                                                                   <!--card-->
+                                                                   <div class="card">
+                                                                    <img src="imgs/Jus de citron et de menthe.jpeg" alt="Lemon And Mint Juice" class="w-full h-58  sm:h-48 object-cover">
+                                                                    <div class="m-4">
+                                                                        <span class="font-bold">Lemon And Mint Juice</span>
+                                                                        <span class="price">Price</span>
+                                                                    </div>
+                                                                    <div class="badge1">
+                                                                        <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                            </svg>
+                                                                            <span >Available</span>
+                                                                    </div>
+                                                                </div> <!--end card-->
+                                                                       <!--card-->
+                                                             <div class="card">
+                                                                <img src="imgs/Jus de fraise.jpeg" alt="Strawberry Juice" class="w-full h-58  sm:h-48 object-cover">
+                                                                <div class="m-4">
+                                                                    <span class="font-bold">Strawberry Juice</span>
+                                                                    <span class="price">Price</span>
+                                                                </div>
+                                                                <div class="badge1">
+                                                                    <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+                                                                        </svg>
+                                                                        <span >Available</span>
+                                                                </div>
+                                                            </div> <!--end card-->
+                                                                      <!--card-->
+                                                                      <div class="card">
+                                                                        <img src="imgs/Jus de melon.jpeg" alt="Melon Juice" class="w-full h-58  sm:h-48 object-cover">
+                                                                        <div class="m-4">
+                                                                            <span class="font-bold">Melon Juice</span>
+                                                                            <span class="price">Price</span>
+                                                                        </div>
+                                                                        <div class="badge2">
+                                                                            <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                                                <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                                                                              </svg>
+                                                                            <span >Not Available</span>
+                                                                        </div>
+                                                                    </div> <!--end card-->
+                           
+                        </div>  <!--end cards 4-->
+
+                        <div class="more">
+                            <div class=" btn btn3"> Load more</div>
+                        </div>
+                    
+                </div>
+              </main></div>
+             
+        
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
